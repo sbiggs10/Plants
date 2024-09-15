@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+	box-sizing: border-box;
+}
+body{
+	background: url(images/background6.avif) no-repeat fixed top left;
+	background-size: cover
+}
+#container{
+	width: 800px;
+		margin: 0 auto;
+		background-color:rgba(98,193,171,.5);
+}
+.left{
+	width:380px;
+	height: 200px;
+	background-color:rgba(255,255,255,.5);
+	border-radius:25px;
+	float: left;
+	margin: 0px 50px 10px 170px;
+	padding: 30px 30px 30px 30px;
+	border: solid rgba(16,75,58,1.00);
+}
+
+.right{
+	width:380px;
+	height: 200px;
+	background-color:rgba(255,255,255,.5);
+	border-radius:25px;
+	float: left;
+	margin: 0px 0px 10px 0px;
+	padding: 30px 30px 30px 30px;
+	border: solid rgba(16,75,58,1.00);
+}
+footer{
+	background-color:rgba(70,91,64,.2);
+	clear: both;
+	padding: 10px 10px 10px 10px;
+
+}
+header > h1{
+	text-align: center;
+	color:rgba(28,61,41,1.00);
+}#cantainer article{
+	background-color: rgba(197,213,208,1.00);
+}
