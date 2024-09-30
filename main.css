@@ -119,3 +119,36 @@ a:hover {
 a:active {
 	color: orange;
 }
+
+table, th, td {
+	border: 2px solid rgba(233,192,193,1.00);
+	border-collapse: collapse;
+	
+}
+tr:hover {
+	background-color:rgba(91,114,82,1.00);
+	color: aliceblue;
+	
+}
+th, td {
+	background-color:rgba(176,107,107,.7);
+
+}
+table {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+}
+
+ul {
+	font-size: 20px;
+	background-color: rgba(117,133,117,1.00);
+	width: 450px;
+	margin-left: 50px;
+	border-radius: 25px;
+}
+iframe {
+	margin-left: 200px;
+	margin-bottom: 50px;
+}
