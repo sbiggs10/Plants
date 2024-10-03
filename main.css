@@ -52,6 +52,7 @@ header > h1{
   	font-weight: 400;
  	font-style: normal;
 	width: 900px;
+	height: 10px;
 }
 /*In this title I tried to use Vw sizing, but I am not sure if it is working. I will check up on this later*/
 h2{
@@ -125,8 +126,13 @@ table, th, td {
 	border-collapse: collapse;
 	
 }
-tr:hover {
-	background-color:rgba(91,114,82,1.00);
+th:hover {
+	background-color: rgba(146,83,84,1.00);
+	color: aliceblue;
+	
+}
+td:hover {
+	background-color: rgba(146,83,84,1.00);
 	color: aliceblue;
 	
 }
@@ -149,6 +155,44 @@ ul {
 	border-radius: 25px;
 }
 iframe {
-	margin-left: 200px;
-	margin-bottom: 50px;
+	float: left;
+	padding: 10px 16px;
+	margin-left: auto;
+	margin-right: auto;
+}
+div {
+	text-align: center;
+	margin-top: 30px;
+}
+lable, input {
+	font-size: 25px;
+}
+#nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+	background-color: rgba(181,126,107,.5);
+	width: 100%;
+	height: 40px;
+	border-radius: 0px;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	
+	
+}
+#ni {
+  display: inline;
+}
+nav li {
+	float: right;
+}
+nav li a {
+	text-align: center;
+	padding:14px 16px;
+	text-decoration: none;
+	display: block;
 }
