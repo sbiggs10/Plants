@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <title>Plants</title>
 <link rel="stylesheet" href="main.css">
@@ -9,6 +10,8 @@
 <body>
 	
 	<nav>
+			
+			
 		
 	<ul id="nav">
   		<li><a href="default.asp">Home</a></li>
@@ -23,12 +26,14 @@
 	
 	<div id="container" style="margin:0 auto">
 		<!--this is the title-->
+		
 	<header><h1 style="font-size: 500%; margin-bottom: 300px; margin-top: 300px; margin-left: auto; margin-right: auto;">Gardening in South Texas</h1></header>
 		
-
+				</div>
+		
 		<div class="flex-container">
   			<div>Annuals</div>
-  			<div>Perenials</div>
+  			<div>Perennials</div>
   			<div>Trees</div>
 			<div>Shrubs</div>
 			<div>Flowers</div>
@@ -52,7 +57,7 @@
 <div id="tabs" style="margin-bottom: 60px;">
   <ul>
     <li><a href="#tabs-1">Annuals</a></li>
-    <li><a href="#tabs-2">Perenials</a></li>
+    <li><a href="#tabs-2">Perennials</a></li>
     <li><a href="#tabs-3">Texas weather</a></li>
   </ul>
   <div id="tabs-1">
@@ -60,7 +65,7 @@
     <p>Annuals are plants that must be planted every year. They do not survive the winter in most cases. They are more likely to be able to survive the winter in warmer climates. It is best practice to plant annuals in the spring so that they can be enjoyed until the first frost.</p>
   </div>
   <div id="tabs-2">
-    <p>Perenials are plants that come back every year or stay year round. These types of plants are great for those who want to have low maintenance plants. Although these plants tend to come back every year, if it is extra cold durng the winter they may not survive. </p>
+    <p>Perennials are plants that come back every year or stay year round. These types of plants are great for those who want to have low maintenance plants. Although these plants tend to come back every year, if it is extra cold durng the winter they may not survive. </p>
   </div>
   <div id="tabs-3">
     <p>Texas weather is very unpredictable. It does tend to be very hot in the summer with quite a few days over 100 degrees Fahrenheit. Fall, winter, and spring are much more unpredictable. Somedays it will feel like a warm summer day, while other will be frigid.</p>
@@ -142,8 +147,12 @@
 			
 		</div>
 		
+	
+	<br>
+	
 		<div>
   	
+		
 		
 		<ul style="list-style-type: disc; float: right; margin-right: 200px;">
 			<caption style="width: auto;"><b>Light requirement meanings</b></caption>
@@ -154,12 +163,15 @@
 				
 		</div>
 			
+	<br>
+	
  		<div>
 			
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/UFki6zeMXro?si=XHY0m0X3bu0424uP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 		
 		</div>
-  			
+  		
+	<br>
 	
 	<div style="margin-bottom: 30px;">	
 		
@@ -231,9 +243,52 @@ ctx.stroke();
 		
 		</div>
 		<div>
+			
+			
+			<button onclick="getLocation()">Try It</button>
+			
+			<p id="demo"></p>
+			
+			<br>
+			<br>
+			
 		<footer>Copyright Sadie Biggs 2024</footer>
 	
 	</div>
-		</div>
+		
 </body>
+	<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script>
+
 </html>
